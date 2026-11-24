@@ -38,8 +38,6 @@
 
 兩頁以 **鑽研（Drill-through）** 串接：在 Page 1 縣市橫條圖右鍵鑽研，Page 2 標題與所有圖表自動篩選至該縣市。配置細節見 [`docs/dashboard_blueprint.md`](docs/dashboard_blueprint.md)。
 
-<!-- 完成後放入截圖：powerbi/screenshots/page1.png、page2.png -->
-
 ## 技術重點
 
 - **Power BI 資料夾合併**：60 個月 CSV 以「取得資料 → 資料夾 → 合併並載入」一次匯入，保留 `Source.Name` 推導資料年度。
@@ -60,18 +58,29 @@
 ## 專案結構
 
 ```
+├── tim/                            Tim 的 Power BI 檔
+├── kelly/                          Kelly 的 Power BI 檔
+├── mars/                           Mars 的 Power BI 檔
+├── 彙整版/                          共用底稿與合併後的正式報表（Kelly 保管）
 ├── data/raw/                       60 個月原始 CSV（202101.csv … 202512.csv）
 ├── analysis/
 │   ├── profile_data.py             資料體檢與驗算腳本
 │   └── summary_stats.md            腳本輸出的驗算基準
-├── powerbi/
-│   ├── dax/calculated_columns.dax  計算資料行 ①–⑰
-│   ├── dax/measures.dax            量值
-│   └── screenshots/                儀表板截圖
+├── powerbi/dax/
+│   ├── calculated_columns.dax      計算資料行 ①–⑰
+│   └── measures.dax                量值
 └── docs/
     ├── build_guide.md              建置步驟（點選＋ DAX）
     └── dashboard_blueprint.md      兩頁儀表板配置
 ```
+
+## 上傳檔案
+
+1. GitHub 網頁進入自己的資料夾（`tim/`、`kelly/` 或 `mars/`）
+2. 右上 **Add file → Upload files** → 拖入 `.pbix`
+3. 下方寫一句說明（例如「Tim 圖表 V1」）→ **Commit changes**
+
+組員需先被加為協作者（Settings → Collaborators）才能上傳。合併流程見 [`彙整版/README.md`](彙整版/README.md)。
 
 ## 如何重現
 
