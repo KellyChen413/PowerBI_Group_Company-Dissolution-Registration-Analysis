@@ -47,6 +47,8 @@
 
 ## 團隊分工
 
+完整分工、時間軸與 Live Demo 逐字稿見 [`docs/作戰手冊.md`](docs/作戰手冊.md)。
+
 小組成員：Kelly、Tim、Mars。資料匯入與 DAX 建模三人一起完成，之後每人負責各自的圖表，並在 Live Demo 中講解自己製作的部分。
 
 | 成員 | 負責圖表與工作 | Live Demo 段落 |
@@ -70,6 +72,7 @@
 │   ├── calculated_columns.dax      計算資料行 ①–⑰
 │   └── measures.dax                量值
 └── docs/
+    ├── 作戰手冊.md                  分工、時間軸、建置步驟、儀表板配置與 Demo 逐字稿
     ├── build_guide.md              建置步驟（點選＋ DAX）
     └── dashboard_blueprint.md      兩頁儀表板配置
 ```
